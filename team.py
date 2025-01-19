@@ -209,7 +209,7 @@ while True:
 
         # Print all relevant data
         print(f"Temperature: {bmp280_temperature}°C, Pressure: {bmp280_pressure} hPa, Light: {lux} Lux")
-        print(f"Temperature Goal: {TEMPERATURE_GOAL}°C, LED Light Goal: {LUX_GOAL}, LED Brightness: {LED_BRIGHTNESS}%, LED Status: {'ON' if manual_led_status else 'OFF'}")
+        print(f"LED Light Goal: {LUX_GOAL}, LED Brightness: {LED_BRIGHTNESS}%, LED Status: {'ON' if manual_led_status else 'OFF'}")
 
         send_data_to_thingspeak(MQTT_TOPIC_MEASURED, THINGSPEAK_WRITE_API_KEY_MEASURED, lux)
         last_publish_time = time.time()
